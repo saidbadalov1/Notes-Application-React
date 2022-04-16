@@ -1,13 +1,160 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+		'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas,
+		'Courier New', monospace;
+}
+
+.container {
+	max-width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+	min-height: 100vh;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header button{
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    width: 120px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 1rem;
+}
+.header button:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.search{
+    margin: 1rem 0px;
+    max-width: 950px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(219, 219, 219);
+    border-radius: 15px;
+    padding: 5px;
+}
+
+input.search-bar{
+    margin-left: 0rem;
+    width: 100%;
+    border-radius: 10px;
+    height: 1.5rem;
+    outline: none;
+    font-size: 1rem;
+    border: none;
+    background-color: rgb(219, 219, 219);
+    color: black;
+
+}
+
+.search-icon{
+    margin-left: 5px;
+    color: black;
+}
+
+#plc::placeholder { 
+    color: black;
+    opacity: .5;
+  }
+
+.notes-list{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.note{
+    background-color: rgb(245, 245, 94);
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.note.new {
+    background-color: rgb(168, 245, 168);
+}
+
+.note-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1.2rem;
+}
+
+button.save {
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+button.save:hover{
+    background-color: rgb(255, 255, 255);
+    transition: all 0.5s;
+    color: black;
+}
+
+.span-note {
+    color: rgb(9, 139, 64);
+}
+
+.dark-mode {
+	background-color: black;
+}
+
+.dark-mode h1 {
+	color: white;
+}
+
+.dark-mode button{
+    background-color: white;
+    color: black;
+}
+
+button.delete-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+button.delete-button:hover{
+    color: red;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+hr{
+    margin-bottom: 1.5rem;
+    margin-top: -1rem;
 }
